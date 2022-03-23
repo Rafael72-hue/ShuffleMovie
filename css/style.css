@@ -1,0 +1,143 @@
+:root {
+    --title: #fffcf9;
+    --subtitle: #b3b3b3;
+    --bg-button: #e9e6e3;
+    --background: linear-gradient(43deg, #102d71 0%, #000000 52%, #c12a23 100%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100vw;
+    height: 100vh;
+    background: var(--background);
+    font-family: 'Poppins';
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height:100%;
+}
+
+header, footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+header > span {
+    color: var(--title);
+    font-weight: 700;
+    padding:10px;
+    font-size:2rem;
+}
+
+button {
+    width: 180.98px;
+    height: 47px;
+    background-color: var(--bg-button);
+
+    cursor: pointer;
+    
+    border: 0;
+    padding: 15px;
+    border-radius: 5px;
+    
+    font-family: 'Poppins';
+    font-weight: 500;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 20px;
+}
+
+footer > span {
+    margin-top: 20px;
+    text-align: center;
+    color: var(--subtitle);
+    width: 60%;
+}
+
+.movie {
+    display: flex;
+}
+
+.movieInfo {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    margin-left: 30px;
+}
+
+.movieTitle {
+    margin: 0 0 20px 0 ;
+    color: var(--title);
+    text-align: left ;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.movieDescription {
+    color: var(--subtitle)
+}
+
+.moviePicture > img {
+    width: 171px;
+    height: 243.77px;
+}
+
+#image {
+    display: none;
+}
+
+
+.movieGender {
+    color: #333;
+    width: fit-content;
+    margin: auto 10px;
+    background-color: #FFF;
+}
+
+@media(max-width: 375px){
+    body, html {
+        height: auto;
+    }
+    .container {
+        height: max-content;
+    }
+
+    .movie {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .movieInfo {
+        width: auto;
+        margin: 10px;
+    }
+
+    header > img {
+        padding-top: 50px;
+    }
+
+    header > span, .movieInfo, .movieTitle {
+        text-align: center;
+    }
+
+    footer > span {
+        width: auto;
+        font-size: 12px;
+        padding-bottom: 50px;
+    }
+}
